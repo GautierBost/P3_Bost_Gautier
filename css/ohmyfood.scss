@@ -109,6 +109,7 @@ body{
 /*header*/
 
 .header {
+    position: relative;
     box-shadow: 0px 5px 5px #5c5c5c;
     &__barre{
         display: flex;
