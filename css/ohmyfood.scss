@@ -336,7 +336,9 @@ footer{
 /*menus-header*/
 
 .header{
+    &__menu{
     box-shadow: none;
+    }
     &__barre a{
     align-self: center;
     position: absolute;
@@ -425,7 +427,7 @@ footer{
             border-radius: 20px;
             margin: 1rem 0;
             @include ombre;
-            &:hover > .carte__section__bloc__vignette__coche{
+            &:hover .carte__section__bloc__vignette__coche{
                 display: flex;
                 animation: slide 700ms;
                 @keyframes slide{
@@ -434,7 +436,6 @@ footer{
                 }
             i{
                 animation: rotations 700ms;
-
                 @keyframes rotations{
                     0%{transform: rotate(0deg);}
                     100%{transform: rotate(360deg);}
@@ -456,6 +457,9 @@ footer{
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
+            }    
+            .collé{
+                display: flex;    
             }
             &__prix{
                 align-self: flex-end;
