@@ -546,7 +546,7 @@ footer .footer ul li i {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.carte__section__bloc__vignette .collé {
+.carte__section__bloc__vignette .colle {
   display: flex;
 }
 .carte__section__bloc__vignette__prix {
@@ -637,4 +637,4 @@ footer .footer ul li i {
     flex-basis: 100%;
     margin: 1rem 1rem;
   }
-}/*# sourceMappingURL=ohmyfood.css.map */
+}/*# sourceMappingURL=style.css.map */
