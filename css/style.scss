@@ -30,7 +30,7 @@ $couleur-ombre: #c7c7c7;
     }
 }
 @mixin apparition{
-    animation: apparition 2s;
+    animation: apparition 2s backwards;
     @keyframes apparition {
         0%{opacity: 0;transform: translateY(30px);}
         100%{opacity: 1;}
@@ -411,11 +411,11 @@ footer{
         }
         &__2{
             @include apparition;
-            animation-duration: 4s;
+            animation-delay: 1s;
         }
         &__3{
             @include apparition;
-            animation-duration: 6s;
+            animation-delay: 2s;
         }
         &__titre{
             font-weight: 400;
@@ -550,8 +550,10 @@ footer{
     .carte__section__bloc{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
         &__vignette{
-            flex-basis: 100%;
+            width: 30%;
             margin: 1rem 1rem;
         }
     }

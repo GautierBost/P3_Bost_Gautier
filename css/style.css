@@ -423,8 +423,8 @@ footer .footer ul li i {
   background-size: 100% 100%;
 }
 .carte__section__1 {
-  -webkit-animation: apparition 2s;
-          animation: apparition 2s;
+  -webkit-animation: apparition 2s backwards;
+          animation: apparition 2s backwards;
 }
 @-webkit-keyframes apparition {
   0% {
@@ -445,10 +445,10 @@ footer .footer ul li i {
   }
 }
 .carte__section__2 {
-  -webkit-animation: apparition 2s;
-          animation: apparition 2s;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  -webkit-animation: apparition 2s backwards;
+          animation: apparition 2s backwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 @keyframes apparition {
   0% {
@@ -460,10 +460,10 @@ footer .footer ul li i {
   }
 }
 .carte__section__3 {
-  -webkit-animation: apparition 2s;
-          animation: apparition 2s;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation: apparition 2s backwards;
+          animation: apparition 2s backwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 @keyframes apparition {
   0% {
@@ -632,9 +632,11 @@ footer .footer ul li i {
   .carte__section__bloc {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   .carte__section__bloc__vignette {
-    flex-basis: 100%;
+    width: 30%;
     margin: 1rem 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
