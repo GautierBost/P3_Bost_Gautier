@@ -1,0 +1,50 @@
+@media screen and (min-width: 768px){
+    .fonctionnement__bloc{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__élément{
+            width: 45%;
+        }
+    }
+    footer .footer{
+        align-items: center;
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            margin: 2rem 0;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .fonctionnement__bloc{
+        flex-wrap: nowrap;
+        &__élément{
+            width: 30%;
+        }
+    }
+    .restaurants__bloc{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__vignette{
+            width: 45%;
+        }
+    }
+    .carte__titre{
+        justify-content: center;
+    }
+    .carte__section__bloc{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &__vignette{
+            width: 30%;
+            margin: 1rem 1rem;
+        }
+    }
+}

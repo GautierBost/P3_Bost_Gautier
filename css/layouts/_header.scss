@@ -1,0 +1,24 @@
+.header {
+    position: relative;
+    box-shadow: 0px 5px 5px #5c5c5c;
+    &__barre{
+        display: flex;
+        justify-content: center;
+        &__logo{
+            font-family: "Shrikhand", sans-serif;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+            font-size: 2rem;
+        }
+        a{
+            align-self: center;
+            position: absolute;
+            left: 0;
+            margin-left: 1rem;
+        }
+    }
+    &__menu{
+        box-shadow: none;
+    }    
+}

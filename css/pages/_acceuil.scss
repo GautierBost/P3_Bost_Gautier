@@ -1,0 +1,176 @@
+/*nav*/
+
+.nav__ville {
+    display: flex;
+    justify-content: center;
+    background-color: $couleur-fond-2;
+    padding: 1rem 0;
+    font-size: 1rem;
+        i {
+            align-self: center;
+        }
+        &__form {
+            margin-left: 0.5rem;
+            width: 8rem;
+        }
+            &__form__input {
+                border: none;
+                background-color: $couleur-fond-2;
+                font-size: 1rem;
+                width: 100%;
+            }
+}
+
+/*présentation*/
+
+.présentation{
+    background-color: $couleur-fond-1;
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &__titre{
+        margin: 0;
+        width: 80%;
+    }
+    &__texte{
+        width: 90%;
+    }
+    &__btn{
+        @include background-btn;
+        border-radius: 50px;
+        color: white;
+        padding: 1rem;
+        @include ombre;
+        margin: 1rem 0;
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 500ms;
+        &:hover{
+            transform: scale(1.1);
+            @include ombre-foncé;
+            @include background-btn-claire;
+        }
+    }
+}
+
+/*fonctionnement*/
+
+.fonctionnement{
+    padding: 2rem 0 3rem 1rem;
+    &__bloc{
+        display: flex;
+        flex-direction: column;
+        &__élément{
+            display: flex;
+            background-color: $couleur-fond-1;
+            margin: 0.5rem 1rem;
+            border-radius: 25px;
+            padding: 0.6rem 0;
+            @include ombre;
+            &__chiffre{
+                background-color: $couleur-primaire;
+                color: white;
+                padding: 0.2rem 0.5rem;
+                border-radius: 20px;
+                position: relative;
+                left: -14px;
+            }
+            i{
+                align-self: center;
+                font-size: 1.2rem;
+                margin-right: 2rem;
+                margin-left: 0.5rem;
+            }
+            &__texte{
+                align-self: center;
+                font-weight: bold;
+            }
+            &--violet {
+                background-color: lighten($couleur-primaire, 35%);
+                i{
+                    color: $couleur-primaire;
+                }
+                    
+            }
+        }
+    }
+}
+
+/*restaurants*/
+
+.restaurants{
+    background-color: $couleur-fond-1;
+    padding: 2rem 1rem 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    &__bloc{
+        display: flex;
+        flex-direction: column;
+        &__vignette{
+            background-color: white;
+            border-radius: 20px;
+            @include ombre;
+            margin: 0.6rem 0;
+            position: relative;
+            &__img{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 200px;
+                    border-radius: 20px 20px 0 0;
+                }
+                p{
+                    background-color: $couleur-tertiaire;
+                    color: darken($couleur-tertiaire, 40%);
+                    font-size: 0.9rem;
+                    width: 4rem;
+                    padding: 0.5rem;
+                    text-align: center;
+                    align-self: flex-end;
+                    position: absolute;
+                    right: 1rem;
+                    top: 0;
+                }
+            }
+            &__texte{
+                padding-left: 1rem;
+                h3{
+                    margin-bottom: 0.5rem;
+                }
+                p{
+                    margin-top: 0;
+                }
+            }
+            .like{
+                position: absolute;
+                right: 1.5rem;
+                bottom: 2rem; 
+                .coeur{
+                    font-size: 1.6rem;
+        
+                    &--plein{
+                        position: relative;
+                        left: 29.5px;
+                        background: linear-gradient(to bottom, $couleur-primaire, $couleur-secondaire);
+                        color: transparent;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        background-size: 100% 0;
+                        background-position: 100% 100%;
+                        transition-property: background;
+                        transition-duration: 1s;
+                        background-repeat: no-repeat;
+                        &:hover{
+                            background-size: 100% 100%;
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}

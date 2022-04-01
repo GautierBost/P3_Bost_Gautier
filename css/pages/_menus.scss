@@ -1,0 +1,155 @@
+/*menus-photo*/
+
+.photo__img{
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+}
+
+/*menus-cartes*/
+
+.carte{
+    display: flex;
+    flex-direction: column;
+    background-color: $couleur-fond-1;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    margin-top: -50px;
+    padding: 0 1rem;
+    &__titre{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        h2{
+            font-family: "Shrikhand", sans-serif;
+            font-weight: 400;
+        }
+        .like{
+            display: flex;
+            align-items: center;
+            padding-right: 1rem;
+            .coeur{
+                font-size: 1.6rem;
+    
+                &--plein{
+                    position: relative;
+                    left: 25.5px;
+                    background: linear-gradient(to bottom, $couleur-primaire, $couleur-secondaire);
+                    color: transparent;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    background-size: 100% 0;
+                    background-position: 100% 100%;
+                    transition-property: background;
+                    transition-duration: 1s;
+                    background-repeat: no-repeat;
+                    &:hover{
+                        background-size: 100% 100%;
+                    }
+                }
+            }        
+        }
+    }
+    /*carte-section*/
+    &__section{
+        &__1{
+            @include apparition;
+        }
+        &__2{
+            @include apparition;
+            animation-delay: 1s;
+        }
+        &__3{
+            @include apparition;
+            animation-delay: 2s;
+        }
+        &__titre{
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+        &__soulignée{
+            border-top: solid $couleur-tertiaire;
+            width: 3rem;
+        }
+        &__bloc__vignette{
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 20px;
+            margin: 1rem 0;
+            @include ombre;
+            &:hover .carte__section__bloc__vignette__coche{
+                display: flex;
+                animation: slide 700ms;
+                @keyframes slide{
+                    0%{width:0}
+                    100%{width: 72px;}
+                }
+            i{
+                animation: rotations 700ms;
+                @keyframes rotations{
+                    0%{transform: rotate(0deg);}
+                    100%{transform: rotate(360deg);}
+                    }
+                }
+            
+            }
+            &__texte{
+                padding-left: 1rem;
+                white-space: nowrap;
+                overflow: hidden;
+                h3{
+                    margin-bottom: 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                p{
+                    margin-top: 0.3rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }    
+            .colle{
+                display: flex;    
+            }
+            &__prix{
+                align-self: flex-end;
+                justify-self: flex-end;
+                font-weight: bold;
+                margin-right: 1rem;
+                margin-left: 1rem;
+            }
+            &__coche{
+                background-color: $couleur-tertiaire;
+                border-radius: 0 20px 20px 0;
+                display: none;
+                i{
+                    color: white;
+                    align-self: center;
+                    margin: 0 1.5rem;
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+    /*menu-bouton*/
+    &__btn{
+        align-self: center;
+        @include background-btn;
+        border-radius: 50px;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        width: 200px;
+        @include ombre;
+        margin: 2rem 0 4rem 0;
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 500ms;
+        &:hover{
+            transform: scale(1.1);
+            @include ombre-foncé;
+            @include background-btn-claire;
+        }    
+    }
+}

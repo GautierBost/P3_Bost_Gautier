@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    min-width: 325px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    ul{
+        list-style: none;
+    }
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
