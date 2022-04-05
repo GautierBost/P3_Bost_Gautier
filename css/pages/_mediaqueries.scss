@@ -20,19 +20,46 @@
 }
 
 @media screen and (min-width: 992px) {
-    .fonctionnement__bloc{
-        flex-wrap: nowrap;
-        &__élément{
-            width: 30%;
+    .header__menu{
+        max-width: 1440px;
+        margin: auto;
+        position: relative;
+    }
+    .fonctionnement{
+        width: calc(100% - 2rem);
+        max-width: 1440px;
+        margin: auto;
+        &__bloc{
+            flex-wrap: nowrap;
+            &__élément{
+                width: 30%;
+            }
         }
+    }
+    .restaurants__fond{
+        max-width: 1440px;
+        margin: auto;
     }
     .restaurants__bloc{
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
         &__vignette{
-            width: 45%;
+            width: 48%;
         }
+    }
+    footer .footer{
+        max-width: 1440px;
+        margin: auto;
+    }
+    .photo{
+        max-width: 1440px;
+        margin: auto;
+    }
+    .carte{
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .carte__titre{
         justify-content: center;
@@ -44,7 +71,7 @@
         flex-wrap: wrap;
         &__vignette{
             width: 30%;
-            margin: 1rem 1rem;
+            margin: 1rem 0;
         }
     }
 }

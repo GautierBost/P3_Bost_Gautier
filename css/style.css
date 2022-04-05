@@ -1,15 +1,21 @@
 @charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   width: 100%;
-  min-width: 325px;
+  min-width: 375px;
 }
-body a {
+
+a {
   text-decoration: none;
   color: black;
 }
-body ul {
+
+ul {
   list-style: none;
 }
 
@@ -210,6 +216,9 @@ footer .footer ul li i {
   font-size: 1rem;
   width: 100%;
 }
+.nav__ville__form__input:focus {
+  outline: none;
+}
 
 /*présentation*/
 .présentation {
@@ -246,7 +255,7 @@ footer .footer ul li i {
 
 /*fonctionnement*/
 .fonctionnement {
-  padding: 2rem 0 3rem 1rem;
+  padding: 2rem 1rem 3rem 1rem;
 }
 .fonctionnement__bloc {
   display: flex;
@@ -259,6 +268,12 @@ footer .footer ul li i {
   border-radius: 25px;
   padding: 0.6rem 0;
   box-shadow: 0px 5px 5px #c7c7c7;
+}
+.fonctionnement__bloc__élément:hover {
+  background-color: #f2eafb;
+}
+.fonctionnement__bloc__élément:hover i {
+  color: #9356DC;
 }
 .fonctionnement__bloc__élément__chiffre {
   background-color: #9356DC;
@@ -278,16 +293,12 @@ footer .footer ul li i {
   align-self: center;
   font-weight: bold;
 }
-.fonctionnement__bloc__élément--violet {
-  background-color: #f2eafb;
-}
-.fonctionnement__bloc__élément--violet i {
-  color: #9356DC;
-}
 
 /*restaurants*/
 .restaurants {
   background-color: #F2F2F2;
+}
+.restaurants__fond {
   padding: 2rem 1rem 3rem 1rem;
   display: flex;
   flex-direction: column;
@@ -319,7 +330,7 @@ footer .footer ul li i {
   background-color: #99E2D0;
   color: #278870;
   font-size: 0.9rem;
-  width: 4rem;
+  width: 5rem;
   padding: 0.5rem;
   text-align: center;
   align-self: flex-end;
@@ -477,6 +488,7 @@ footer .footer ul li i {
 .carte__section__bloc__vignette {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   background-color: white;
   border-radius: 20px;
   margin: 1rem 0;
@@ -601,6 +613,17 @@ footer .footer ul li i {
   }
 }
 @media screen and (min-width: 992px) {
+  .header__menu {
+    max-width: 1440px;
+    margin: auto;
+    position: relative;
+  }
+
+  .fonctionnement {
+    width: calc(100% - 2rem);
+    max-width: 1440px;
+    margin: auto;
+  }
   .fonctionnement__bloc {
     flex-wrap: nowrap;
   }
@@ -608,13 +631,34 @@ footer .footer ul li i {
     width: 30%;
   }
 
+  .restaurants__fond {
+    max-width: 1440px;
+    margin: auto;
+  }
+
   .restaurants__bloc {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .restaurants__bloc__vignette {
-    width: 45%;
+    width: 48%;
+  }
+
+  footer .footer {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .photo {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .carte {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .carte__titre {
@@ -629,6 +673,6 @@ footer .footer ul li i {
   }
   .carte__section__bloc__vignette {
     width: 30%;
-    margin: 1rem 1rem;
+    margin: 1rem 0;
   }
 }/*# sourceMappingURL=style.css.map */
